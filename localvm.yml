@@ -16,7 +16,7 @@
   - name: apt-get clean
     shell: apt-get clean
   - name: Set firewall default policy
-    ufw: state=enabled policy=reject
+    ufw: state=enabled policy=reject direction=incoming
   - name: Allow ssh on port 22
     ufw: rule=allow port=22
   - name: Allow traffic to hit port 80
